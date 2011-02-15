@@ -12,6 +12,7 @@
 namespace Imagine\Gd;
 
 use Imagine\Color;
+use Imagine\Font;
 use Imagine\Point;
 use Imagine\Draw\DrawerInterface;
 use Imagine\Exception\InvalidArgumentException;
@@ -229,6 +230,16 @@ final class Drawer implements DrawerInterface
 
         return $this;
     }
+
+    /**
+     * (non-PHPdoc)
+     * @see Imagine\Draw.DrawerInterface::text()
+     */
+    public function text($string, Font $font, Point $position, Color $color = null)
+    {
+
+    }
+
     /**
      * Internal
      *

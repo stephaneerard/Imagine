@@ -12,6 +12,7 @@
 namespace Imagine\Draw;
 
 use Imagine\Color;
+use Imagine\Font;
 use Imagine\Point;
 use Imagine\Filter\FilterInterface;
 
@@ -110,5 +111,13 @@ interface DrawerInterface
      */
     function polygon(array $coordinates, Color $color, $fill = false);
 
-//    function text($x, $y, Font $font, Color $color);
+    /**
+     * Positions a string
+     *
+     * @param string $string
+     * @param Font   $font
+     * @param Point  $position
+     * @param Color  $color
+     */
+    function text($string, Font $font, Point $position, Color $color = null);
 }
