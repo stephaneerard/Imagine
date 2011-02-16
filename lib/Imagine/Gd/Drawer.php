@@ -235,9 +235,19 @@ final class Drawer implements DrawerInterface
      * (non-PHPdoc)
      * @see Imagine\Draw.DrawerInterface::text()
      */
-    public function text($string, Font $font, Point $position, Color $color = null)
+    public function text($string, Font $font, Point $position)
     {
-
+//        $box = imagettfbbox($font->getSize(), 0, $font->getPath(), $string);
+				switch($font->isInternal())
+				{
+					case true:
+						\imagestring($this->resource, $font->getPath(), $position->getX(), $position->getY(), $string, $this->getColor($font->getColor()));
+						break;
+					case false:
+						\imagettftext($this->resource, $font->getSize(), 0, $position->getX(), $position->getY(), $this->getColor($font->getColor()), $font->getPath(), $string);
+						break;
+				}
+        return $this;
     }
 
     /**

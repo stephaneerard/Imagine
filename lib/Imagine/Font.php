@@ -13,22 +13,40 @@ namespace Imagine;
 
 final class Font
 {
-    private $font;
+    private $path;
     private $size;
+    private $color;
 
-    public function __construct($font, $size)
+    public function __construct($path, $size, Color $color)
     {
-        $this->font = $font;
-        $this->size = $size;
+        $this->path  				= $path;
+        $this->size  				= $size;
+        $this->color 				= $color;
     }
 
-    public function getFont()
+    /**
+     * Returns the path of the font.
+     * If $this->isInternal(), returns the number
+     * defining the internal font
+     * 
+     */
+    public function getPath()
     {
-        return $this->font;
+        return $this->path;
     }
 
     public function getSize()
     {
         return $this->size;
+    }
+
+    public function getColor()
+    {
+        return $this->color;
+    }
+    
+    public function isInternal()
+    {
+    	return is_numeric($this->path);
     }
 }
