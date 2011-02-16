@@ -22,49 +22,49 @@ Let's see the YAML definition:
     header:
       type: static_text           #static_text is used to write a text, driver will call drawStaticText
       text: My Funny Header       #the text to be drawn
-      font: internal-2            #the font to use, defined later
+      font: gd-internal-2         #the font to use, defined later
       font-size: 20               #the font size
       font-color: [0, 0, 0]       #the font color
-      font-alpha: 100             #the font alpha
+      font-alpha: 0               #the font alpha
       position: [5, 25]           #the position on the image
     name:
       type: dynamic               #dynamic tells to call a method named drawDynamicName
-      font: internal-2
+      font: gd-internal-2
       font-size: 15
       font-color: [0, 0, 0]
       font-alpha: 100
       position: [200, 60]
     persons:
       type: dynamic
-      font: internal-2
+      font: gd-internal-2
       font-color: [0, 0, 0]
       font-size: 12
       font-alpha: 100
       position: [150, 90]
     valide_date:
       type: dynamic
-      font: internal-2
+      font: gd-internal-2
       font-size: 12
       font-color: [0, 0, 0]
       font-alpha: 100
       position: [150, 105]
     number:
       type: dynamic
-      font: internal-2
+      font: gd-internal-2
       font-size: 12
       font-color: [0, 0, 0]
       font-alpha: 100
       position: [450, 100]
     bar_code:
       type: dynamic
-      font: internal-2
+      font: gd-internal-2
       font-size: 12
       font-color: [0, 0, 0]
       font-alpha: 100
       position: [100, 120]
 
   fonts:
-    internal-2: 2
+    gd-internal-2: 2
     liberation-sans-serif: /usr/share/fonts/truetype/ttf-liberation/LiberationSerif-Italic.ttf
 
 
