@@ -20,7 +20,7 @@ Let's see the YAML definition:
 
   image_generator.drawing:
     header:
-      type: static-text           #static-text is used to write a text
+      type: static_text           #static_text is used to write a text, driver will call drawStaticText
       text: My Funny Header       #the text to be drawn
       font: internal-2            #the font to use, defined later
       font-size: 20               #the font size
@@ -28,7 +28,7 @@ Let's see the YAML definition:
       font-alpha: 100             #the font alpha
       position: [5, 25]           #the position on the image
     name:
-      type: dynamic #dynamic tells to call a method named drawName
+      type: dynamic               #dynamic tells to call a method named drawDynamicName
       font: internal-2
       font-size: 15
       font-color: [0, 0, 0]
